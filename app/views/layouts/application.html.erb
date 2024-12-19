@@ -13,7 +13,8 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -46,9 +47,9 @@
             <p class"control">
               <%= link_to 'New Tweet', new_tweet_path, class: "button is-info is-inverted" %>
             </p>
+            <p class="control">Sign up</p>
 
 
-            
           </div>
         </div>
       </div>
