@@ -45,7 +45,13 @@
       <div class="navbar-end">
         <div class="buttons">
           <%= link_to 'New Tweet', root_path, class: "button is-black is-inverted" %>
-          <%= link_to 'Sign Up', new_user_registration_path, class: "button is-black" %>
+            <% if user_signed_in? %>
+            <%= link_to current_user.name, edit_user_registration_path, class: "button is-black" %>
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "button is-black" %>
+          <% else %>
+            <%= link_to 'Sign Up', new_user_registration_path, class: "button is-black" %>
+            <%= link_to 'Sign In', new_user_session_path, class: "button is-black" %>
+          <% end %>
         </div>
       </div>
     </div>
