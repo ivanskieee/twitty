@@ -1,20 +1,24 @@
 <div class="column is-half">
+    <% if user_signed_in? %>
     <article class="media box">
         <figure class="media-left">
             <p class="image is-64x64">
-                <img src="https://bulma.io/assets/images/placeholders/128x128.png" />
+              <%= van(current_user.email, size: 64, alt: current_user.name) %>
             </p>
         </figure>
         <div class="media-content">
             <%= render 'tweets/form' %>
         </div>
     </article>
+    <% end %>
+
+
 <% @tweets.each do | tweet | %>
     <div class="box">
         <article class="media">
             <div class="media-left">
                 <figure class="image is-64x64">
-                    <img src="https://bulma.io/assets/images/placeholders/128x128.png" />
+                    <%= van(tweet.user.email, size: 64, alt: tweet.user.name) %>
                 </figure>
             </div>
             <div class="media-content">
