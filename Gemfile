@@ -31,7 +31,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem 'bulma-rails', '~> 0.6.1'
+gem 'bulma-rails', '~> 1.0.3'
 gem 'simple_form', '~> 5.3', '>= 5.3.1'
 gem 'sassc'
 gem 'gravatar_image_tag', '~> 1.2'
